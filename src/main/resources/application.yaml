@@ -1,0 +1,18 @@
+server:
+  port: 7070
+
+spring:
+    application:
+        name: spring-boot-opa
+
+management:
+    endpoints:
+        web:
+          exposure:
+            include: "*"
+
+
+opa:
+  url: "http://localhost:8181/v1/data/httpapi/authz"
+  path: finance,salary
+  method: GET
